@@ -15,7 +15,7 @@ const Navbar = () => {
                             </div>
                             </Link>
 
-                            <div className="flex items-center">
+                            <div className="border rounded-xl flex items-center">
                                 <form className="flex p-3 items-center">
                                     <input type="text" placeholder="Search..."
                                     className="bg-transparent focus:outline-none">

@@ -35,7 +35,10 @@ export const signin = async (req, res, next) => {
 
         //I am creating a Json Web Token here (JWT) that allows a user's previously cached login to be remembered by the client-side
         const token = jwt.sign({id: validUser._id}, process.env.JWT_SECRET);
-        res.cookie('access_Token', token, {httpOnly: true}).status(200).json({message: "user logged in successfully"});
+        //validUser; 
+        const {password: pass, ...rest} = validUser._doc;
+        
+        res.cookie('access_Token', token, {httpOnly: true}).status(200).json(rest);
 
     } catch (error) {
         next(error);
