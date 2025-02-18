@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from 'react'
 import Navbar from './components/Navbar'
